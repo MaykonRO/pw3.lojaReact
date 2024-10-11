@@ -1,0 +1,13 @@
+import { React } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+export default function SuaFuncao(props){
+    return(
+        <Row>
+            <Col>
+            
+            </Col>
+        </Row>
+    )
+}
