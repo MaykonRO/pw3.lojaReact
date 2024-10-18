@@ -12,7 +12,6 @@ export default function Home(){
     return(
         <Row>
             <Col>
-                <Menu cor='black' corTxt='white'/>
                 <Foter cor='black' corTxt='white'/>
             </Col>
         </Row>

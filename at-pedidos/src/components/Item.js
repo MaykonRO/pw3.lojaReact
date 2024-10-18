@@ -16,12 +16,11 @@ export default function Item(props){
     }
 
     return(
-        <li style={item}>
-            12# Pizzas Doces 
-            <div>
-                <button style={stl_item}><Icon.CheckSquare /></button> 
-                <button style={stl_item}> <Icon.Trash  /> </button>
-            </div>
-        </li>
+        <tr>
+            <td>{props.item.cd_categoria}#</td>
+            <td>{props.item.nm_categoria}</td>
+            <Button variant='danger'><Icon.Trash></Icon.Trash> </Button>
+            <Button variant='warning'> <Icon.PencilSquare></Icon.PencilSquare> </Button>
+        </tr>
     )
 }

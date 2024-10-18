@@ -14,7 +14,7 @@ import Home from './page/Home';
 
 function App() {
   return (
-    <Home />
+    <Menu cor="black" corb="black" corTxt='white' />
   );
 }
 
