@@ -8,6 +8,9 @@ import Compras from '../page/Compras';
 import Produtos from '../page/Produtos';
 import Home from '../page/Home';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import BotaoHoverTags from './BotaoHoverTags';
+import BotaoHoverCart from './BotaoHoverCart';
+import BotaoHoverArchive from './BotaoHoverArchive';
 
 
 export default function Menu(props) {
@@ -30,59 +33,59 @@ export default function Menu(props) {
     }
     const sizeIconhover = {
 
-    }
+    };
     const [show, setShow] = useState(false);
     const target = useRef(null);
 
+   
+
+        return (
+            <Router>
+                <Container style={stl_menu}>
+                    <div style={centro}>
+                        <div>
+                            <Link to="/">
+                                <button style={botoes}>
+                                   <BotaoHoverCart/> 
+                                </button>
+
+                            </Link>
+                        </div>
+
+                        <div>
+                            <Link to="/compras">
+                                <button style={botoes}>
+                                    <BotaoHoverTags />
+                                </button>
+
+                            </Link>
+                        </div>
+
+                        <div>
+                            <Link to="/produtos">
+                                <button style={botoes}>
+                                    
+                                    <BotaoHoverArchive/>
+                                </button>
+
+                            </Link>
+                        </div>
+
+                    </div> {/* FIM DA DIV DE CENTRO  */}
+
+                </Container>
 
 
-    return (
-        <Router>
-            <Container style={stl_menu}>
-                <div style={centro}>
-                    <div>
-                        <Link to="/">
-                            <button style={botoes}>
-                                <Icon.CartFill style={sizeIcon} />
-                            </button>
 
-                        </Link>
-                    </div>
+                <Routes>
+                    <Route path='/' element={< Home />}>s</Route>
+                    <Route path='Compras' element={< Compras />}>s</Route>
+                    <Route path='Produtos' element={< Produtos />}>s</Route>
+                </Routes>
 
-                    <div>
-                        <Link to="/compras">
-                            <button style={botoes}>
-                                <Icon.TagsFill style={sizeIcon}  />
-                            </button>
-
-                        </Link>
-                    </div>
-
-                    <div>
-                        <Link to="/produtos">
-                            <button style={botoes}>
-                                <Icon.ArchiveFill style={sizeIcon} />
-
-                            </button>
-                        
-                        </Link>
-                    </div>
-
-                </div> {/* FIM DA DIV DE CENTRO  */}
-
-            </Container>
+            </Router>
 
 
+        )
 
-            <Routes>
-                <Route path='/' element={< Home />}>s</Route>
-                <Route path='Compras' element={< Compras />}>s</Route>
-                <Route path='Produtos' element={< Produtos />}>s</Route>
-            </Routes>
-
-        </Router>
-
-
-    )
-
-}
+    }

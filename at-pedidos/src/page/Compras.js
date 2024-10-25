@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import Item from '../components/Item';
 import Busca from '../components/Busca';
+import Foter from '../components/Foter';
+import BotaoHover from '../components/BotaoHoverTags';
+import * as Icon from 'react-bootstrap-icons';
 
 export default function Compras(){
     let [lista, setLista] = useState([]);
@@ -18,7 +21,7 @@ export default function Compras(){
 
     return(
         <Container>
-            <Busca />
+            <Busca placeH='pesquisar...' />
             <Row className="mt-3 mb-3" >
                 <Col xs={{span:10}}>
                     <Table responsive className='mb-3'>
@@ -36,6 +39,9 @@ export default function Compras(){
                     </tbody>
 
                 </Table>
+
+                <Foter cor="black" corTxt="white" />
+
                 </Col>
                 
             </Row>
